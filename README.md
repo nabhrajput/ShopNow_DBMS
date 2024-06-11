@@ -77,6 +77,85 @@ This project is a database management system (DBMS) application for a fictional 
 ## Project Structure
 - `shopnow_interface.py`: Main script containing the interface and functionality to interact with the ShopNow database.
 
+Here is the given database schema in markdown format:
+
+# Database Schema
+
+## Tables
+
+### Customer
+- **id**: VARCHAR(10), Primary Key
+- **first_name**: VARCHAR(15)
+- **last_name**: VARCHAR(15)
+- **street_number**: VARCHAR(20)
+- **pincode**: VARCHAR(6)
+- **state**: VARCHAR(15)
+- **email_id**: VARCHAR(50)
+- **phone_no**: VARCHAR(10)
+- **dob**: DATE
+- **age**: INT
+
+### Seller
+- **id**: VARCHAR(10), Primary Key
+- **first_name**: VARCHAR(15)
+- **last_name**: VARCHAR(15)
+- **street_number**: VARCHAR(20)
+- **pincode**: VARCHAR(6)
+- **state**: VARCHAR(15)
+- **email_id**: VARCHAR(50)
+- **phone_no**: VARCHAR(10)
+- **dob**: DATE
+- **age**: INT
+
+### Admin
+- **id**: VARCHAR(10), Primary Key
+- **first_name**: VARCHAR(15)
+- **last_name**: VARCHAR(15)
+- **street_number**: VARCHAR(20)
+- **pincode**: VARCHAR(6)
+- **state**: VARCHAR(15)
+- **email_id**: VARCHAR(50)
+- **phone_no**: VARCHAR(10)
+- **dob**: DATE
+- **age**: INT
+
+### Orders
+- **id**: VARCHAR(10), Primary Key
+- **order_date**: DATE
+- **order_time**: TIME
+- **cust_id**: VARCHAR(10), Foreign Key (customer.id)
+- **seller_id**: VARCHAR(10), Foreign Key (seller.id)
+
+### Payment
+- **id**: VARCHAR(10), Primary Key
+- **amount**: DECIMAL(10,2)
+- **pay_date**: DATE
+- **pay_time**: TIME
+- **cust_id**: VARCHAR(10), Foreign Key (customer.id)
+- **order_id**: VARCHAR(10), Foreign Key (orders.id)
+
+### Category
+- **id**: VARCHAR(10), Primary Key
+- **category_name**: VARCHAR(20), UNIQUE
+
+### Product
+- **id**: VARCHAR(10), Primary Key
+- **name**: VARCHAR(20)
+- **category_id**: VARCHAR(10), Foreign Key (category.id)
+- **quan_avail**: INT
+- **price**: DECIMAL(10,2)
+- **discount**: DECIMAL(5,2)
+
+### Cart
+- **cust_id**: VARCHAR(10), Primary Key, Foreign Key (customer.id)
+- **prod_id**: VARCHAR(10), Primary Key, Foreign Key (product.id)
+- **quan**: INT
+- **cost**: DECIMAL(10,2)
+
+### Wishlist
+- **product_id**: VARCHAR(10), Primary Key, Foreign Key (product.id)
+- **customer_id**: VARCHAR(10), Primary Key, Foreign Key (customer.id)
+
 ## License
 This project is licensed under the MIT License.
 
