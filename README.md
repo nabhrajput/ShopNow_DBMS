@@ -20,13 +20,13 @@ This project is a database management system (DBMS) application for a fictional 
 ## Setup Instructions
 
 ### Prerequisites
-- Python 3.x
+- Python 3
 - MySQL
 
 ### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/shopnow-dbms.git
+    git clone https://github.com/nabhrajput/shopnow-dbms.git
     cd shopnow-dbms
     ```
 
@@ -82,5 +82,5 @@ This project is licensed under the MIT License.
 
 ## Contact
 For any questions or inquiries, please contact:
-- Nabh Rajput: [your-email@example.com]
+- Nabh Rajput: [nabh21170@iiitd.ac.in]
 
