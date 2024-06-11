@@ -156,9 +156,6 @@ Here is the given database schema in markdown format:
 - **product_id**: VARCHAR(10), Primary Key, Foreign Key (product.id)
 - **customer_id**: VARCHAR(10), Primary Key, Foreign Key (customer.id)
 
-## License
-This project is licensed under the MIT License.
-
 ## Contact
 For any questions or inquiries, please contact:
 - Nabh Rajput: [nabh21170@iiitd.ac.in]
